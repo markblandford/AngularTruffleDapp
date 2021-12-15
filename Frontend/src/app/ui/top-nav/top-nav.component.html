@@ -8,18 +8,18 @@
       <span>Angular + Truffle = 💓ÐAPP</span>
     </mat-toolbar-row>
     <mat-nav-list>
-      <mat-list-item [routerLink]="['/home']">
+      <mat-list-item>
         <mat-icon>home</mat-icon>
         Home
       </mat-list-item>
-      <mat-list-item [routerLink]="['/money']">
+      <mat-list-item  >
         <mat-icon>money</mat-icon>
         Transactions
       </mat-list-item>
 
     </mat-nav-list>
   </mat-sidenav>
- <mat-sidenav-content>
+  <mat-sidenav-content>
     <mat-toolbar color="primary">
       <button
         type="button"
@@ -29,12 +29,14 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-        <span>Angular Ðapp</span>
+      <span>Angular Ðapp</span>
       <span class="example-spacer"></span>
-      <button mat-icon-button [routerLink]="['/account']">
+      <button mat-icon-button>
         <mat-icon>person</mat-icon>
       </button>
     </mat-toolbar>
-    <router-outlet></router-outlet>
+    <div class="body">
+<router-outlet></router-outlet>
+    </div>
   </mat-sidenav-content>
 </mat-sidenav-container>

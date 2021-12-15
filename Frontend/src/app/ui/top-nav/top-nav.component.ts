@@ -13,8 +13,10 @@ export class TopNavComponent implements OnInit {
 
   menuItems = ['Home', 'Transaction'];
 
+
   ngOnInit(): void {
   }
+
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
@@ -23,8 +25,5 @@ export class TopNavComponent implements OnInit {
     );
 
   constructor(private breakpointObserver: BreakpointObserver) { }
-
-
-
 
 }
