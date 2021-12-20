@@ -1,18 +1,20 @@
-<mat-card class="register">
-  <p>Thanks for downloading, if you liked don't forget to leave a star on github.
+<div class="body">
+  <mat-card class="register">
+    <p>Thanks for downloading, if you liked don't forget to leave a star on github.
 
-  </p>
+    </p>
 
-  <div style="text-align:center">
-    <button mat-raised-button dark class="big-round-shape-button black">
-      <mat-icon>
-        <img height="20" src="../../../assets/github.svg">
-      </mat-icon>
-      Star Repo</button>
-    <h1>
-      <img class="logo" src="assets/angular.png" alt="logo_angular">Angular
-      +
-      <img class="logo" src="assets/truffle.png" alt="logo_truffle">Truffle = ÐAPP</h1>
-  </div>
+    <div style="text-align:center">
+      <button mat-raised-button dark class="big-round-shape-button black" (click)="GiveStar()">
+        <mat-icon>
+          <img height="20" src="../../../assets/github.svg">
+        </mat-icon>
+        Star Repo</button>
+      <h1>
+        <img class="logo" src="assets/angular.png" alt="logo_angular">Angular
+        +
+        <img class="logo" src="assets/truffle.png" alt="logo_truffle">Truffle = ÐAPP</h1>
+    </div>
 
-</mat-card>
+  </mat-card>
+</div>
