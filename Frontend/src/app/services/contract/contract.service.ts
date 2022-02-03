@@ -1,6 +1,6 @@
 import {Inject, Injectable} from '@angular/core';
 import { WEB3 } from '../../core/web3';
-import contract from 'truffle-contract';
+//import contract from 'truffle-contract'; //acceso a libreria deprecada
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Subject } from 'rxjs';
 
@@ -68,6 +68,7 @@ export class ContractService {
     const that = this;
 
     return new Promise((resolve, reject) => {
+      var contract = require("@truffle/contract"); // acceso a nueva version de libreria
       const paymentContract = contract(tokenAbi);
       paymentContract.setProvider(this.provider);
       paymentContract.deployed().then((instance) => {
