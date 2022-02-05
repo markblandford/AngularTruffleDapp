@@ -1,9 +1,9 @@
 import { ContractService } from "./../../services/contract/contract.service";
 import { Component } from "@angular/core";
-import { ThreeBox } from "../../services/3box.service";
+/*import { ThreeBox } from "../../services/3box.service";
 import { DomSanitizer } from "@angular/platform-browser";
 import { Identicon } from "../../services/identicon";
-import { Md5 } from "ts-md5/dist/md5";
+import { Md5 } from "ts-md5/dist/md5";*/
 
 @Component({
   selector: "app-account",
@@ -13,14 +13,14 @@ import { Md5 } from "ts-md5/dist/md5";
 export class AccountComponent {
   direction: string;
   balance: string;
-  profile;
-  url;
-  data;
+  //profile;
+  //url;
+  //data;
 
   constructor(
     private contract: ContractService,
-    private sanitizer: DomSanitizer,
-    private threebox: ThreeBox
+    //private sanitizer: DomSanitizer,
+    //private threebox: ThreeBox
   ) {
     this.contract
       .connectAccount()
@@ -31,8 +31,8 @@ export class AccountComponent {
             console.log(response);
             this.profile = response;
             this.url = this.profile.image[0].contentUrl["/"];
-          }); */
-        this.getImage(this.direction);
+          }); 
+        this.getImage(this.direction);*/
       })
       .catch((error: any) => {
         this.contract.failure(
@@ -41,7 +41,7 @@ export class AccountComponent {
       });
   }
 
-  getImage(account) {
+  /*getImage(account) {
     this.data = this.sanitizer.bypassSecurityTrustResourceUrl(
       "data:image/svg+xml; utf8," +
       encodeURI(
@@ -51,7 +51,7 @@ export class AccountComponent {
         }).toString(true)
       )
     );
-  }
+  }*/
 
   navigateTo() {
     window.open("https://metamask.io/");
